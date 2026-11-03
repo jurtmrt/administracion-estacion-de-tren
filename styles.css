@@ -47,3 +47,43 @@ body{
     text-decoration: none;
 }
 
+.rutas{
+    margin: 160px 0;
+}
+
+.rutas,
+.seleccion-rutas{
+    display: flex;
+    justify-content: center;
+}
+
+.seleccion-rutas{
+    flex-direction: column;
+}
+
+.linea-namboku,
+.linea-tozai,
+.linea-toho{
+    flex-basis: 250px;
+    padding: 0 190px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #EEF2FF;
+}
+
+.linea-namboku{
+    background-color: #018006;
+}
+
+.linea-tozai{
+    background-color: #faaa1b;
+}
+
+.linea-toho{
+    background-color: #0a7fec;
+}
+
+#mapa-rutas{
+   width: 900px;
+   height: 750px;
+}
