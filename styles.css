@@ -13,16 +13,25 @@ body{
     background-color: #312E81;
     display: flex;
     justify-content: space-between;
+    max-height: 80px;
 }
 
 .logo,
+.navegacion,
 .navegacion ul{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 20px;
-    padding: 15px 25px;
     
+}
+
+.logo,
+.navegacion{
+    padding: 15px 25px;
+}
+
+.navegacion ul{
+    gap: 20px;
 }
 
 #logo-sp{
@@ -35,6 +44,7 @@ body{
     font-size: 22px;
     font-weight: bold;
     color: #EEF2FF;
+    margin: 0;
 }
 
 .navegacion ul{
@@ -46,6 +56,8 @@ body{
     color: inherit;
     text-decoration: none;
 }
+
+/*
 
 .rutas{
     margin: 160px 0;
@@ -87,3 +99,5 @@ body{
    width: 900px;
    height: 750px;
 }
+*/
+
