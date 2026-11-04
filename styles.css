@@ -60,7 +60,24 @@ body{
 
 h1{
     text-align: center;
+    margin-bottom: 60px;
 }
+
+.bienvenida{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.bienvenida p{
+    line-height: 1.8;
+    text-align: justify;
+}
+
+
 
 /*
 
