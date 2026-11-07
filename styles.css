@@ -109,7 +109,53 @@ h1{
 .datos{
     background-color: #312E81;
     color: #EEF2FF;
+    padding: 60px 0;
 }
+
+.titulo-datos{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.facturacion,
+.facturacion div{
+    display:flex;
+    flex-direction: column;
+    align-items: center:
+}
+
+.facturacion{
+    max-width: 700px;
+    gap: 20px;
+    margin: 0 auto;
+}
+
+.facturacion div input{
+    padding: 10px 20px;
+    border-radius: 20px;
+    outline: solid black 2px;
+    font-size: 14px;
+}
+
+.boton-siguiente{
+    width: 160px;
+    padding: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 45px auto 80px;
+    border-radius: 15px;
+    background-color: #EEF2FF;
+    transition-duration: 0.4s;
+}
+
+.boton-siguiente:hover{
+    background-color:  #027c5c;
+    color: white;
+}
+
+
+
 
 /*
 
@@ -154,4 +200,3 @@ h1{
    height: 750px;
 }
 */
-
