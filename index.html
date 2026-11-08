@@ -45,7 +45,7 @@
     </div>
 
     <div class="datos">
-        <form class="facturacion seccion-datos">
+        <form class="facturacion seccion-datos activa">
             <h2 class="titulo-datos">Datos Facturación</h2>
             <div>
                 <label class="etiqueta" for="nombres">Nombres</label>
@@ -67,10 +67,8 @@
                 <label class="etiqueta" for="nit">NIT</label>
                 <input type="text" name="nit" id="nit">
             </div>
-            <button class="boton-siguiente">Siguiente</button>
+            <button type="button" class="boton-siguiente">Siguiente</button>
         </form>
-
-        <hr>
         
         <form class="lineas seccion-datos">
             <h2 class="titulo-datos">Selección Línea</h2>
@@ -91,11 +89,36 @@
                     </div>
                 </div>
             </div>
-            <button class="boton-siguiente">Siguiente</button>
+            <button type="button" class="boton-siguiente">Siguiente</button>
         </form>
 
-    
-
-
+        <form class="estaciones seccion-datos">
+            <h2 class="titulo-datos">Selección de Estaciones</h2>
+            <p class="nombre-linea-seleccionada">Línea activa: <span id="nombre-linea-lbl">---</span></p>
+            <div>
+                <details class="cuadro-desplegable">
+                <summary class="titulo-desplegable">Ver Estaciones Disponibles</summary>
+                <div class="lista-estaciones" id="lista-estaciones-desplegable">
+                <!-- Se llena con JS -->
+                </div>
+                </details>
+            </div>
+            <div>
+                <label class="etiqueta" for="origen">Estación Origen</label>
+                <select id="origen" name="origen" required>
+                    <option value="">-- Selecciona Origen --</option>
+                </select>
+            </div>
+            <div>
+                <label class="etiqueta" for="destino">Estación Destino</label>
+                <select id="destino" name="destino" required>
+                    <option value="">-- Selecciona Destino --</option>
+                </select>
+            </div>
+            <button type="submit" class="boton-siguiente">Finalizar Boleto</button>
+        </form>
+        
+    </div>
+        <script src="./script.js"></script>
 </body>
 </html>
