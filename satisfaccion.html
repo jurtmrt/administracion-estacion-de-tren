@@ -82,5 +82,52 @@
         </form>
     </div>
 
+<script>
+    document.getElementById('form-satisfaccion').addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const dataGuardada = localStorage.getItem('boletoSapporo');
+        let nombreCompleto = 'Anónimo';
+
+        if (dataGuardada) {
+            const datosUsuario = JSON.parse(dataGuardada);
+            nombreCompleto = `${datosUsuario.nombres || ''} ${datosUsuario.apellidos || ''}`.trim();
+        }
+
+        const evaluacion = {
+            nombreCompleto: nombreCompleto,
+            experiencia: document.getElementById('experiencia').value,
+            satisfaccion: document.querySelector('input[name="satisfaccion"]:checked')?.value || '',
+            apariencia: document.querySelector('input[name="apariencia"]:checked')?.value || '',
+            accesibilidad: document.querySelector('input[name="accesibilidad"]:checked')?.value || '',
+            recompra: document.getElementById('recompra').value,
+            notas: document.getElementById('notas').value || 'Sin notas'
+        };
+
+        const API_URL = 'https://sheetdb.io/api/v1/72ntod5u07xml';
+
+        try {
+            const respuesta = await fetch(API_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ data: evaluacion })
+            });
+
+            if (respuesta.ok) {
+                alert('¡Gracias por evaluar nuestro servicio! Tus datos fueron guardados.');
+                
+                localStorage.removeItem('boletoSapporo');
+                window.location.href = './index.html';
+            } else {
+                alert('Ocurrió un error al guardar la encuesta. Inténtalo nuevamente.');
+            }
+        } catch (error) {
+            console.error('Error enviando datos:', error);
+            alert('Error de conexión al guardar la encuesta.');
+        }
+    });
+</script>
 </body>
 </html>
