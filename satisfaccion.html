@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Satisfacción - Metro de Sapporo</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./imagenes/ST_Logo.svg">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="logo"> 
+            <img id="logo-sp" src="./imagenes/ST_Logo.svg" alt="Logo Metro de Sapporo"> 
+            <p>Metro de Sapporo</p>
+        </div>
+        <nav class="navegacion">
+            <ul class="enlaces">
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="#">Mapa</a></li>
+                <li><a href="#">Política</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="datos">
+        <form class="satisfaccion" id="form-satisfaccion">
+            <h2 class="titulo-datos">Encuesta de Satisfacción</h2>
+
+            <div>
+                <label class="etiqueta" for="experiencia">1. Descripción de tu experiencia</label>
+                <textarea id="experiencia" name="experiencia" rows="3" required></textarea>
+            </div>
+
+            <div>
+                <label class="etiqueta">2. Nivel de Satisfacción General</label>
+                <div class="grupo-radio">
+                    <label><input type="radio" name="satisfaccion" value="excelente" required> Excelente</label>
+                    <label><input type="radio" name="satisfaccion" value="bien"> Bien</label>
+                    <label><input type="radio" name="satisfaccion" value="promedio"> Promedio</label>
+                    <label><input type="radio" name="satisfaccion" value="mal"> Mal</label>
+                </div>
+            </div>
+
+            <div>
+                <label class="etiqueta">3. Apariencia de la Página Web</label>
+                <div class="grupo-radio">
+                    <label><input type="radio" name="apariencia" value="excelente" required> Excelente</label>
+                    <label><input type="radio" name="apariencia" value="bien"> Bien</label>
+                    <label><input type="radio" name="apariencia" value="promedio"> Promedio</label>
+                    <label><input type="radio" name="apariencia" value="mal"> Mal</label>
+                </div>
+            </div>
+
+            <div>
+                <label class="etiqueta">4. Accesibilidad de la Página Web</label>
+                <div class="grupo-radio">
+                    <label><input type="radio" name="accesibilidad" value="excelente" required> Excelente</label>
+                    <label><input type="radio" name="accesibilidad" value="bien"> Bien</label>
+                    <label><input type="radio" name="accesibilidad" value="promedio"> Promedio</label>
+                    <label><input type="radio" name="accesibilidad" value="mal"> Mal</label>
+                </div>
+            </div>
+
+            <div>
+                <label class="etiqueta" for="recompra">5. ¿Volverías a comprar con nosotros?</label>
+                <select id="recompra" name="recompra" required>
+                    <option value="">-- Selecciona una opción --</option>
+                    <option value="definitivamente">Definitivamente</option>
+                    <option value="si">Sí</option>
+                    <option value="probablemente">Probablemente</option>
+                    <option value="no">No</option>
+                    <option value="jamas">Jamás</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="etiqueta" for="notas">6. Notas Adicionales</label>
+                <textarea id="notas" name="notas" rows="3"></textarea>
+            </div>
+
+            <button type="submit" class="boton-siguiente">Enviar Encuesta</button>
+        </form>
+    </div>
+
+</body>
+</html>
