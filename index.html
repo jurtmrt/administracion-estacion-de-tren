@@ -45,7 +45,7 @@
     </div>
 
     <div class="datos">
-        <div class="facturacion">
+        <form class="facturacion seccion-datos">
             <h2 class="titulo-datos">Datos Facturación</h2>
             <div>
                 <label class="etiqueta" for="nombres">Nombres</label>
@@ -68,39 +68,34 @@
                 <input type="text" name="nit" id="nit">
             </div>
             <button class="boton-siguiente">Siguiente</button>
-        </div>
+        </form>
 
         <hr>
-    </div>
-
-    <!--
-
-    <div class="rutas">
-        <form class="seleccion-rutas">
-            <div class="linea-namboku">
-                <label>
-                    <input type="radio" name="ruta" value="namboku">
-                    Namboku
-                </label>
+        
+        <form class="lineas seccion-datos">
+            <h2 class="titulo-datos">Selección Línea</h2>
+            <div class="contenedor-mapa">
+                <img src="./imagenes/ST_Mapa.png" alt="Mapa Líneas Metro Sapporo" id="mapa-lineas">
+                <div class="opciones-lineas">
+                    <div class="linea namboku">
+                        <input type="radio" id="namboku" name="linea" value="namboku">
+                        <label for="namboku">Namboku</label>
+                    </div>
+                    <div class="linea tozai">
+                        <input type="radio" id="tozai" name="linea" value="tozai">
+                        <label for="tozai">Tozai</label>
+                    </div>
+                    <div class="linea toho">
+                        <input type="radio" id="toho" name="linea" value="toho">
+                        <label for="namboku">Toho</label>
+                    </div>
+                </div>
             </div>
-            <div class="linea-tozai">
-                <label>
-                    <input type="radio" name="ruta" value="tozai">
-                    Tozai
-                </label>
-            </div>
-            <div class="linea-toho">
-                <label>
-                    <input type="radio" name="ruta" value="toho">
-                    Toho
-                </label>
-            </div>
+            <button class="boton-siguiente">Siguiente</button>
         </form>
-        <div class="imagen-rutas">
-            <img id="mapa-rutas" src="./imagenes/ST_Mapa.png" alt="Mapa Rutas">
-        </div>
-    </div>
 
-    -->
+    
+
+
 </body>
 </html>

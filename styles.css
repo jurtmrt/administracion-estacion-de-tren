@@ -118,11 +118,15 @@ h1{
     font-size: 30px;
 }
 
-.facturacion,
+.seccion-datos{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .facturacion div{
     display:flex;
     flex-direction: column;
-    align-items: center:
 }
 
 .facturacion{
@@ -145,7 +149,8 @@ h1{
     font-weight: bold;
     margin: 45px auto 80px;
     border-radius: 15px;
-    background-color: #EEF2FF;
+    background-color: #03a378;
+    color: #EEF2FF;
     transition-duration: 0.4s;
 }
 
@@ -154,49 +159,43 @@ h1{
     color: white;
 }
 
-
-
-
-/*
-
-.rutas{
-    margin: 160px 0;
+.contenedor-mapa{
+    position: relative;
 }
 
-.rutas,
-.seleccion-rutas{
+#mapa-lineas{
+    width: 825px;
+    height: auto;
+    display: block;
+}
+
+.lineas div{
+    margin: 0 auto;
+}
+
+.opciones-lineas{
     display: flex;
-    justify-content: center;
-}
-
-.seleccion-rutas{
     flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 690px;
+    bottom: 435px;
 }
 
-.linea-namboku,
-.linea-tozai,
-.linea-toho{
-    flex-basis: 250px;
-    padding: 0 190px;
-    font-size: 22px;
-    font-weight: bold;
-    color: #EEF2FF;
+.linea{
+    padding: 15px 20px;
+    width: 95px;
 }
 
-.linea-namboku{
+.namboku{
     background-color: #018006;
 }
 
-.linea-tozai{
+.tozai{
     background-color: #faaa1b;
 }
 
-.linea-toho{
+.toho{
     background-color: #0a7fec;
 }
 
-#mapa-rutas{
-   width: 900px;
-   height: 750px;
-}
-*/
