@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boleto - Metro de Sapporo</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./imagenes/ST_Logo.svg">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="logo"> 
+            <img id="logo-sp" src="./imagenes/ST_Logo.svg" alt="Logo Metro de Sapporo"> 
+            <p>Metro de Sapporo</p>
+        </div>
+        <nav class="navegacion">
+            <ul class="enlaces">
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="#">Mapa</a></li>
+                <li><a href="#">Política</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="datos">
+        <div class="contenedor-boleto">
+            <h2 class="titulo-datos">Comprobante de Boleto</h2>
+
+            <div class="tarjeta-boleto">
+                <div class="encabezado-tarjeta">
+                    <h3>Metro de Sapporo</h3>
+                    <span class="tarifa-badge" id="lbl-tarifa">400 ¥</span>
+                </div>
+
+                <hr class="linea-divisora">
+
+                <div class="info-pasajero">
+                    <p><strong>Pasajero:</strong> <span id="lbl-nombre">---</span></p>
+                    <p><strong>Correo:</strong> <span id="lbl-email">---</span></p>
+                    <p><strong>NIT:</strong> <span id="lbl-nit">---</span></p>
+                    <p><strong>Dirección:</strong> <span id="lbl-direccion">---</span></p>
+                </div>
+
+                <hr class="linea-divisora">
+
+                <div class="info-trayecto">
+                    <p><strong>Línea:</strong> <span id="lbl-linea">---</span></p>
+                    <p><strong>Origen:</strong> <span id="lbl-origen">---</span></p>
+                    <p><strong>Destino:</strong> <span id="lbl-destino">---</span></p>
+                </div>
+            </div>
+
+            <div class="acciones-boleto">
+                <a href="./index.html" class="boton-siguiente enlace-inicio">Volver al Inicio</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const dataGuardada = localStorage.getItem('boletoSapporo');
+
+            if (dataGuardada) {
+                const datos = JSON.parse(dataGuardada);
+
+                document.getElementById('lbl-nombre').textContent = `${datos.nombres} ${datos.apellidos}`;
+                document.getElementById('lbl-email').textContent = datos.email;
+                document.getElementById('lbl-nit').textContent = datos.nit;
+                document.getElementById('lbl-direccion').textContent = datos.direccion;
+                document.getElementById('lbl-linea').textContent = datos.linea;
+                document.getElementById('lbl-origen').textContent = datos.origen;
+                document.getElementById('lbl-destino').textContent = datos.destino;
+                document.getElementById('lbl-tarifa').textContent = datos.tarifa;
+            }
+        });
+    </script>
+</body>
+</html>

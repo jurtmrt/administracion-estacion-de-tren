@@ -255,3 +255,60 @@ h1{
     display: flex;
     justify-content: space-between;
 }
+
+.contenedor-boleto {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.tarjeta-boleto {
+    background-color: #ffffff;
+    color: #1e1b4b;
+    border-radius: 20px;
+    padding: 25px 30px;
+    margin-top: 20px;
+}
+
+.encabezado-tarjeta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.encabezado-tarjeta h3 {
+    margin: 0;
+    color: #312E81;
+    font-size: 22px;
+}
+
+.tarifa-badge {
+    background-color: #03a378;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 12px;
+}
+
+.linea-divisora {
+    border: 0;
+    border-top: 2px dashed #cbd5e1;
+    margin: 15px 0;
+}
+
+.info-pasajero p,
+.info-trayecto p {
+    margin: 8px 0;
+    font-size: 15px;
+}
+
+.acciones-boleto {
+    text-align: center;
+}
+
+.enlace-inicio {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+}

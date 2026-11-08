@@ -165,3 +165,37 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+const formEstaciones = document.querySelector('.estaciones');
+
+    formEstaciones.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+    const selectOrigen = document.getElementById('origen');
+    const selectDestino = document.getElementById('destino');
+    const lineaSeleccionada = document.querySelector('input[name="linea"]:checked');
+
+    const origenText = selectOrigen.options[selectOrigen.selectedIndex]?.text || '';
+    const destinoText = selectDestino.options[selectDestino.selectedIndex]?.text || '';
+
+    if (!selectOrigen.value || !selectDestino.value) {
+        alert("Por favor, selecciona tanto la estación de origen como la de destino.");
+        return;
+    }
+
+    const datosBoleto = {
+        nombres: document.getElementById('nombres').value || 'N/A',
+        apellidos: document.getElementById('apellidos').value || 'N/A',
+        email: document.getElementById('email').value || 'N/A',
+        direccion: document.getElementById('direccion').value || 'N/A',
+        nit: document.getElementById('nit').value || 'C/F',
+        linea: lineaSeleccionada ? lineaSeleccionada.value.toUpperCase() : 'N/A',
+        origen: origenText,
+        destino: destinoText,
+        tarifa: "400 ¥" // Tarifa hardcodeada a 400 yenes
+    };
+
+    localStorage.setItem('boletoSapporo', JSON.stringify(datosBoleto));
+    
+    window.location.href = './boleto.html';
+});
